@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Задание 1 Формы: атрибуты input -->
+    <input type="text" name="login" placeholder="Введите логин:" />
+    <!-- Задание 2 Формы: label -->
+    <label>
+        <span>Логин</span>
+        <input type="text" name="login" placeholder=" " />
+    </label>
+    <!-- Задание 3 Формы: form -->
+    <form autocomplete="off" method="POST" action="javascript:void(0);">
+        <label>
+            <span>Логин</span>
+            <input type="text" name="login" placeholder=" " />
+        </label>
+        <label>
+            <span>Пароль</span>
+            <input type="password" name="password" placeholder=" " />
+        </label>
+        <button type="submit">Отправить</button>
+    </form>
+    <!-- Задание 4 Формы: textarea -->
+    <form autocomplete="off" method="POST" action="javascript:void(0);">
+        <label for="id-comment">Комментарий</label>
+        <textarea id="id-comment" name="comment" placeholder="Поделись своим мнением:"></textarea>
+        <button type="submit">Отправить</button>
+        <button type="reset">Сброс</button>
+    </form>
+    <!-- Задание 5 Формы. Радиокнопки и чекбоксы. -->
+    <div class="container">
+        <section>
+            <h4>Выбери только одно значение</h4>
+            <form action="javascript:void(0);" id="id-radio">
+                <div>
+                    <label for="id-red">red</label>
+                    <label for="id-green">green</label>
+                    <label for="id-blue">blue</label>
+                    <label for="id-black">black</label>
+                </div>
+                <div>
+                    <input id="id-red" name="colors" type="radio" value="red" />
+                    <input id="id-green" name="colors" type="radio" value="green" checked />
+                    <input id="id-blue" name="colors" type="radio" value="blue" />
+                    <input id="id-black" name="colors" type="radio" value="black" disabled />
+                </div>
+            </form>
+            <button form="id-radio" type="submit">Отправить</button>
+            <button form="id-radio" type="reset">Обновить</button>
+        </section>
+        <section>
+            <h4>Выбери несколько значений</h4>
+            <form action="javascript:void(0);" id="id-checkbox">
+                <div>
+                    <label for="red">red</label>
+                    <label for="green">green</label>
+                    <label for="blue">blue</label>
+                    <label for="black">black</label>
+                </div>
+                <div>
+                    <input id="red" name="colors" type="checkbox" value="red" />
+                    <input id="green" name="colors" type="checkbox" value="green" checked />
+                    <input id="blue" name="colors" type="checkbox" value="blue" />
+                    <input id="black" name="colors" type="checkbox" value="black" disabled />
+                </div>
+            </form>
+            <button form="id-checkbox" type="submit">Отправить</button>
+            <button form="id-checkbox" type="reset">Обновить</button>
+        </section>
+    </div>
+    <!-- Задание 6 Формы: select -->
+    <form action="javascript:void(0);">
+        <select>
+            <optgroup label="Developer"><option value="frontend">Frontend</option></optgroup>
+            <optgroup label="Base skills"><option value="html" selected>HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option></optgroup>
+            <optgroup label="Frameworks" disabled><option value="vue">Vue</option>
+            <option value="react">React + GraphQL</option>
+            <option value="angular">Angular</option></optgroup>
+        </select>
+        <button type="submit">Отправить</button>
+        <button type="reset">Обновить</button>
+    </form>
+    <!-- Задание 7 Формы: datalist -->
+    <form action="javascript:void(0);">
+        <label for="myBrowser">Выбор браузера</label>
+        <input id="myBrowser" name="myBrowser" list="browsers" />
+        <datalist id="browsers">
+            <option>Chrome</option>
+            <option>Firefox</option>
+            <option>Internet Explorer</option>
+            <option>Opera</option>
+            <option>Safari</option>
+            <option>Microsoft Edge</option>
+        </datalist>
+    </form>
+
+</body>
+</html>
